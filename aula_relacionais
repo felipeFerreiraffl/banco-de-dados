@@ -1,3 +1,6 @@
+* Linguagem SQL --> utilizada para banco de dados
+  - DDL --> definição
+  - DML --> manipulação
 * WorkBench --> espaço visual para criar o banco de dados;
 * Banco de Dados relacionais (80%) --> as entidades (tabelas) se relacionam entre si;
 * Relações de BD:
