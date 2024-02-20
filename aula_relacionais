@@ -9,3 +9,6 @@
   - 1:N --> uma linha de entidade para várias linhas;
   - N:M --> várias linhas de entidades para várias linhas;
     -- Neste caso, é utilizado uma tabela a mais;
+
+* PRIMARY KEY
+* FOREIGN KEY
