@@ -10,5 +10,6 @@
   - N:M --> várias linhas de entidades para várias linhas;
     -- Neste caso, é utilizado uma tabela a mais;
 
-* PRIMARY KEY
-* FOREIGN KEY
+* Chave primária --> uma chave utilizada em uma entidade específica
+* Chave estrangeira --> uma chave utilizada em outras entidades
+* Chave única --> uma chave utilizada apenas uma vez
