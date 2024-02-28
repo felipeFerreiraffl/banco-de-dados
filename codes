@@ -19,7 +19,7 @@ ALTER TABLE profissional ADD(
 ALTER TABLE profissional DROP salario;
 _____________________________________________________________________________________________________
 
--- Exercício BD --
+-- Exercício BD - Pizzaria --
 CREATE DATABASE pizzaria;
 USE pizzaria;
 
