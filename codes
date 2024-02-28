@@ -17,3 +17,47 @@ ALTER TABLE profissional ADD(
 
 -- DROP: deleta --
 ALTER TABLE profissional DROP salario;
+_____________________________________________________________________________________________________
+
+-- Exercício BD --
+CREATE DATABASE pizzaria;
+USE pizzaria;
+
+CREATE TABLE cliente(
+	id INT,
+	telefone VARCHAR(11),
+    nome VARCHAR(120),
+    rua VARCHAR(255),
+    nr INT,
+    bairro VARCHAR(120),
+    
+    CONSTRAINT pk_cliente PRIMARY KEY(telefone, nome) 
+);
+
+CREATE TABLE pedido(
+	id INT,
+    idCliente INT,
+    dtPedido DATE,
+    
+    CONSTRAINT pk_pedido PRIMARY KEY(id)
+);
+
+CREATE TABLE pedidoItens(
+	id INT,
+    idPedido INT,
+    idSabor INT,
+    preco FLOAT,
+    
+    CONSTRAINT pk_pedidoItens PRIMARY KEY(id),
+    CONSTRAINT fk_idPedido FOREIGN KEY(idPedido) REFERENCES pedido(id),
+    CONSTRAINT fk_idSabor FOREIGN KEY(idSabor) REFERENCES sabores(id)
+);
+
+CREATE TABLE sabores(
+	id INT,
+    descricao VARCHAR(120),
+    preco FLOAT,
+    
+    CONSTRAINT pk_pedido PRIMARY KEY(id)
+);
+
