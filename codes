@@ -31,7 +31,7 @@ CREATE TABLE cliente(
     nr INT,
     bairro VARCHAR(120),
     
-    CONSTRAINT pk_cliente PRIMARY KEY(telefone, nome) 
+    CONSTRAINT pk_cliente PRIMARY KEY(id) 
 );
 
 CREATE TABLE pedido(
@@ -39,7 +39,8 @@ CREATE TABLE pedido(
     idCliente INT,
     dtPedido DATE,
     
-    CONSTRAINT pk_pedido PRIMARY KEY(id)
+    CONSTRAINT pk_pedido PRIMARY KEY(id),
+    CONSTRAINT fk_cliente FOREIGN KEY(idCliente) REFERENCES cliente(id)
 );
 
 CREATE TABLE pedidoItens(
