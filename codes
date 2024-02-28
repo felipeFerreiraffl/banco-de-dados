@@ -31,7 +31,7 @@ CREATE TABLE cliente(
     nr INT,
     bairro VARCHAR(120),
     
-    CONSTRAINT pk_cliente PRIMARY KEY(id) 
+    CONSTRAINT pk_cliente PRIMARY KEY (id) 
 );
 
 CREATE TABLE pedido(
@@ -40,7 +40,7 @@ CREATE TABLE pedido(
     dtPedido DATE,
     
     CONSTRAINT pk_pedido PRIMARY KEY(id),
-    CONSTRAINT fk_cliente FOREIGN KEY(idCliente) REFERENCES cliente(id)
+    CONSTRAINT fk_cliente FOREIGN KEY (idCliente) REFERENCES cliente(id)
 );
 
 CREATE TABLE pedidoItens(
@@ -50,8 +50,8 @@ CREATE TABLE pedidoItens(
     preco FLOAT,
     
     CONSTRAINT pk_pedidoItens PRIMARY KEY(id),
-    CONSTRAINT fk_idPedido FOREIGN KEY(idPedido) REFERENCES pedido(id),
-    CONSTRAINT fk_idSabor FOREIGN KEY(idSabor) REFERENCES sabores(id)
+    CONSTRAINT fk_idPedido FOREIGN KEY (idPedido) REFERENCES pedido(id),
+    CONSTRAINT fk_idSabor FOREIGN KEY (idSabor) REFERENCES sabores(id)
 );
 
 CREATE TABLE sabores(
@@ -59,6 +59,6 @@ CREATE TABLE sabores(
     descricao VARCHAR(120),
     preco FLOAT,
     
-    CONSTRAINT pk_pedido PRIMARY KEY(id)
+    CONSTRAINT pk_pedido PRIMARY KEY (id)
 );
 
