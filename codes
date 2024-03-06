@@ -73,7 +73,9 @@ SELECT * FROM pedido JOIN cliente ON pedido.id_cliente = cliente.id;
 
 -- AVG(): média
 -- COUNT(): quantidade
-SELECT avg(pi.preco), count(*) 
+-- LEFT(): selecionar quantidade de caracteres
+# Quando funções de grupo e de linhas se encontram, o código não funciona
+SELECT LEFT(c.nome, 3), AVG(pi.preco), COUNT(*) 
 FROM pedido p JOIN cliente c
 ON p.id_cliente = c.id
 	JOIN pedido_itens pi
