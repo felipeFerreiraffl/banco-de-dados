@@ -82,3 +82,12 @@ ON p.id_cliente = c.id
 	ON p.id = pi.id_pedido
 		JOIN sabores s
         ON pi.id_sabor = s.id
+        
+
+SELECT * FROM cliente;
+UPDATE cliente
+	SET nome = "Roberto Júnior" WHERE id = 2; -- Seleciona um item da tabela para alterar
+    
+SELECT * FROM pedido_itens;
+DELETE FROM pedidos_itens
+	WHERE id = 1;
